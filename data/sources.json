@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Open Library",
+    "type": "official",
+    "url": "https://openlibrary.org/",
+    "api": "https://openlibrary.org/developers/api"
+  },
+  {
+    "name": "Google Books",
+    "type": "catalog",
+    "url": "https://books.google.com/",
+    "api": "https://developers.google.com/books/docs/v1/using"
+  },
+  {
+    "name": "Internet Archive",
+    "type": "archive",
+    "url": "https://archive.org/",
+    "api": "https://archive.org/services/docs/api/"
+  },
+  {
+    "name": "Community sources",
+    "type": "community",
+    "url": "",
+    "notes": "Add independently maintained catalogs and repositories here after checking their indexing/access rules."
+  },
+  {
+    "name": "Academic repositories",
+    "type": "academic",
+    "url": "",
+    "notes": "Add institutional repositories and open-access catalogs here."
+  }
+]
