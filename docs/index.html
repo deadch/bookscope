@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BookScope — pesquisa federada de livros e acervos digitais.">
+  <title>BookScope — Pesquisa de livros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">BookScope</a>
+    <div class="lang">
+      <button data-lang="pt" class="active">PT</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FEDERATED BOOK SEARCH</p>
+      <h1 data-i18n="title">Pesquise livros em vários acervos.</h1>
+      <p class="subtitle" data-i18n="subtitle">Uma interface web simples para pesquisar catálogos e arquivos digitais sem instalar o BookScope.</p>
+
+      <form id="searchForm" class="search">
+        <input id="query" autocomplete="off" required
+               data-i18n-placeholder="placeholder"
+               placeholder="Título, autor, ISBN ou assunto...">
+        <button type="submit" data-i18n="search">Pesquisar</button>
+      </form>
+
+      <div class="filters">
+        <label>
+          <span data-i18n="source">Fonte</span>
+          <select id="source">
+            <option value="all" data-i18n="all">Todas</option>
+            <option value="openlibrary">Open Library</option>
+            <option value="googlebooks">Google Books</option>
+            <option value="archive">Internet Archive</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="limit">Resultados</span>
+          <select id="limit">
+            <option>10</option>
+            <option selected>20</option>
+            <option>40</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="results" class="results"></section>
+
+    <section class="sources">
+      <h2 data-i18n="sourcesTitle">Fontes pesquisadas</h2>
+      <p data-i18n="sourcesText">O BookScope funciona como um índice: os resultados apontam para a página original da fonte.</p>
+      <div class="source-grid">
+        <a href="https://openlibrary.org/" target="_blank" rel="noopener">Open Library</a>
+        <a href="https://books.google.com/" target="_blank" rel="noopener">Google Books</a>
+        <a href="https://archive.org/" target="_blank" rel="noopener">Internet Archive</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>BookScope</span>
+    <span data-i18n="footer">Pesquisa e descoberta de livros.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
